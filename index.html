@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الديسار | مخبوزات وقهوة خاصة – أبو نصير</title>
+<meta name="description" content="الديسار: سينابون وكرواسون وكوكيز وقهوة مختصة في أبو نصير، بجانب مسجد أبو نصير الكبير.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF4EC;--card:#fff;--soft:#F1E2D0;--ink:#2B1810;--mute:#78604F;--copper:#B9683A;--line:#E6D5C2;--esp:#2B1810;--cream:#FAF4EC}
+@media (prefers-color-scheme:dark){:root{--bg:#1A100B;--card:#261812;--soft:#322016;--ink:#F6EADD;--mute:#C3A58E;--copper:#D58B5C;--line:#412A1D}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Cairo',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--esp);color:var(--cream)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand b{font-size:24px;font-weight:900;color:#E3A17A}
+.brand span{font-size:12px;opacity:.7;letter-spacing:.14em}
+nav{display:flex;gap:6px;align-items:center}
+nav a{padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px;opacity:.85}
+nav a:hover{opacity:1;background:rgba(255,255,255,.08)}
+nav a.cta{background:#E3A17A;color:var(--esp);opacity:1}
+/* hero */
+.hero{background:var(--esp);color:var(--cream);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:64px;padding-bottom:72px}
+.hero .tag{color:#E3A17A;font-weight:600;font-size:16px}
+h1{font-size:clamp(50px,9vw,96px);font-weight:900;line-height:1.08;margin:10px 0 16px}
+.hero p.lead{font-size:19px;max-width:32ch;opacity:.82}
+.btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:700;background:#E3A17A;color:var(--esp);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(250,244,236,.4)}
+.roll{width:min(100%,380px);aspect-ratio:1;border-radius:50%;margin:auto;transform:rotate(-10deg);
+background:repeating-radial-gradient(circle,#EBC094 0 7px,#B9683A 7px 15px,#D9A06F 15px 20px);
+box-shadow:inset 0 0 0 14px #F0D1AB,inset 0 0 0 20px #C98558,0 30px 60px -20px rgba(0,0,0,.6)}
+/* combo */
+.combo{background:#E3A17A;color:var(--esp);text-align:center;padding:16px 22px;font-weight:700}
+/* sections */
+section{padding:72px 0}
+.head{margin-bottom:30px;max-width:56ch}
+h2{font-size:clamp(30px,5vw,42px);font-weight:900;line-height:1.25}
+.sub{color:var(--mute);margin-top:6px}
+/* signature */
+.sig{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sig article{background:var(--esp);color:var(--cream);border-radius:26px;padding:30px 26px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.sig article:nth-child(2){background:var(--copper)}
+.sig h3{font-size:26px;font-weight:900;line-height:1.2}
+.sig p{opacity:.8;font-size:15px;margin-top:6px}
+.sig b{font-size:22px;color:#E3A17A}
+.sig article:nth-child(2) b{color:var(--esp)}
+/* menu */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 0 14px;position:sticky;top:64px;background:var(--bg);z-index:5;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{font:inherit;font-weight:600;white-space:nowrap;padding:8px 20px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;align-items:start}
+.group{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 26px 18px}
+.group h3{font-size:22px;font-weight:900;color:var(--copper);margin-bottom:6px}
+.group h4{font-size:14px;font-weight:700;color:var(--mute);margin:16px 0 2px}
+.item{display:flex;align-items:baseline;gap:10px;padding:8px 0}
+.item i{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-4px)}
+.item b{font-weight:800;color:var(--ink)}
+.item small{color:var(--mute);font-size:12px;font-weight:600;margin-inline-start:2px}
+/* visit */
+.visit{background:var(--soft)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.visit p{color:var(--mute);margin-top:10px;max-width:38ch}
+.visit .btn{background:var(--esp);color:var(--cream);margin-top:22px;margin-inline-end:10px}
+.visit .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.pin{background:var(--card);border-radius:26px;padding:34px;border:1px solid var(--line)}
+.pin h3{font-size:20px;font-weight:900;color:var(--copper)}
+.pin p{color:var(--ink);margin-top:4px}
+.pin hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+footer{background:var(--esp);color:var(--cream);padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.85}
+@media(max-width:760px){
+ .hero .wrap,.visit .wrap,.sig{grid-template-columns:1fr}
+ .roll{width:220px;order:-1}.hero .wrap{padding-top:40px;padding-bottom:48px}
+ nav a:not(.cta){display:none}section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="#top"><b>الديسار</b><span>ALDESAR</span></a>
+<nav><a href="#signature">Signature</a><a href="#menu">المنيو</a><a href="#visit">زورونا</a><a class="cta" href="https://maps.app.goo.gl/RxmMF4D7p9Hq8JFG7">الموقع</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<span class="tag">مخبوزات وقهوة خاصة · أبو نصير</span>
+<h1>ذوّق التجربة</h1>
+<p class="lead">سينابون وكرواسون وكوكيز بتطلع طازجة، وقهوة مختصة تكمّل الطعمة.</p>
+<div class="btns"><a class="btn" href="#menu">تصفّح المنيو</a><a class="btn ghost" href="#visit">كيف توصلنا</a></div>
+</div>
+<div class="roll" role="img" aria-label="سينابون من الديسار"></div>
+</div></div>
+
+<div class="combo">كومبو رقم 1: قطعة كيكة كوكيز مثلث مع أي مشروب ساخن من اختياركم بـ 5 دنانير فقط</div>
+
+<section id="signature"><div class="wrap">
+<div class="head"><h2>مشروبات Signature</h2><p class="sub">ثلاث وصفات خاصة بالديسار.</p></div>
+<div class="sig">
+<article><div><h3>ديسا فروزن<br>Dessa</h3></div><b>2.5 د</b></article>
+<article><div><h3>كالما<br>Calma</h3></div><b>3 د</b></article>
+<article><div><h3>كرافو<br>Cravo</h3></div><b>3 د</b></article>
+</div>
+</div></section>
+
+<section id="menu" style="padding-top:0"><div class="wrap">
+<div class="head"><h2>المنيو</h2><p class="sub">الأسعار بالدينار الأردني.</p></div>
+<div class="tabs" id="tabs" role="group" aria-label="أقسام المنيو"></div>
+<div class="grid" id="list"></div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+<div>
+<h2>زورونا</h2>
+<p>نلاقيكم في أبو نصير، بجانب مسجد أبو نصير الكبير.</p>
+<a class="btn" href="https://maps.app.goo.gl/RxmMF4D7p9Hq8JFG7">افتح الموقع على الخريطة</a><a class="btn ghost" href="https://instagram.com/aldesar.jo">إنستغرام</a>
+</div>
+<div class="pin">
+<h3>العنوان</h3><p>أبو نصير، بجانب مسجد أبو نصير الكبير</p>
+<hr>
+<h3>تابعونا</h3><p>@aldesar.jo</p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© الديسار – ALDESAR</span><span>Taste the Unexpected</span></div></footer>
+
+<script>
+const M=[
+{n:"كرواسون",i:[["كرواسون رول",2.5],["كرواسون مربع",2.5],["كرواسون مربع ميني",1.5]]},
+{n:"سينابون",i:[["سينابون بستاشيو",2],["سينابون لوتس",2],["سينابون كلاسيك",2]]},
+{n:"كوكيز",i:[["كوكيز ماتشا",1],["كوكيز كلاسيك",1],["كوكيز ريد فيلفت",1],["كوكيز فستق حلبي",1.5],["ديسا ريدفيلفيت",2.5],["ديسا كوكيز كلاسيك",2.5],["ديسا كوكيز ماتشا",2.5]]},
+{n:"كيك",i:[["شوكلت كيك",2],["كيكة البستاشيو",3],["كيك كوكيز",3],["ماتيلدا كيك",3],["كيكة العسل",3],["لندن كيك",3],["تشيز كيك إيطالي",3.5]]},
+{n:"Signature",i:[["ديسا فروزن Dessa",2.5],["كالما Calma",3],["كرافو Cravo",3]]},
+{n:"قهوة بلاك",i:[["اسبرسو",1.5],["دبل اسبرسو",2],["أمريكانو",2.5],["أمريكان",2],["آيس أمريكانو",2.5],["قهوة تركي",1],["V60",3.5],["قهوة مختصة حب (1 كغ)",22]]},
+{n:"ماتشا",i:[["ماتشا فانيلا فراب",3],["ماتشا لاتيه",3.5],["آيس شاي ماتشا",3.5]]},
+{n:"مشروبات بحليب",g:[
+["ساخنة",[["لاتيه",2.5],["كراميل لاتيه",2.5],["فانيلا لاتيه",2.5],["كابتشينو",2.5],["فلات وايت",2.5],["كورداتو",2],["ميكاتو",3.5],["دارك موكا",3],["وايت موكا",3],["سبانيش لاتيه",3],["هوت شوكلت",3]]],
+["باردة",[["كراميل لاتيه",3],["فانيلا لاتيه",3],["لاتيه بارد",2.5],["آيس سبانيش لاتيه",2.5],["آيس دارك موكا",3],["آيس وايت موكا",3],["آيس ميكاتو",3]]]]},
+{n:"معجنات",i:[["بيتزا",1],["زعتر وجبنة",1],["مكس أجبان",1],["زعتر",1]]},
+{n:"شاي ومشروبات",i:[["شاي",0.75],["شاي كرك",2],["آيس تي دراق",2.5],["آيس تي ليمون",2.5],["شاي سبايسي",3],["سموذي كبير",3],["موهيتو كبير",2],["مياه",0.5],["مياه غازية",1]]},
+{n:"Kids",i:[["سموذي Kids",1],["موهيتو Kids",1]]}
+];
+const rows=a=>a.map(([t,p])=>`<div class="item"><span>${t}</span><i></i><b>${p}<small> د</small></b></div>`).join("");
+const card=c=>`<div class="group"><h3>${c.n}</h3>${c.g?c.g.map(([h,a])=>`<h4>${h}</h4>${rows(a)}`).join(""):rows(c.i)}</div>`;
+const tabs=document.getElementById("tabs"),list=document.getElementById("list");
+function show(k){
+ [...tabs.children].forEach((b,j)=>b.setAttribute("aria-pressed",j===k));
+ list.innerHTML=(k===0?M:[M[k-1]]).map(card).join("");
+}
+["الكل",...M.map(c=>c.n)].forEach((t,k)=>{
+ const b=document.createElement("button");b.textContent=t;b.onclick=()=>show(k);tabs.appendChild(b);
+});
+show(0);
+</script>
+</body>
+</html>
